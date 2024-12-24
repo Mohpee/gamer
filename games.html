@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas and Happy New Year</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light pastel background */
+            text-align: center;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: 'Pacifico', sans-serif;
+            font-size: 3em;
+            color: #ff6347; /* Warm red color */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-family: 'Lobster', sans-serif;
+            font-size: 2em;
+            color: #ffeb3b; /* Bright yellow */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            margin: 20px 0;
+        }
+        .images-section, .videos-section {
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+        .images-videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.7);
+        }
+        video {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        video:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.7);
+        }
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        .box {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to bottom, #ff6347, #ff4500);
+            border: 3px solid #cc3333;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            font-size: 2.5em;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+        }
+        .box.opened {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            animation: explode 0.5s ease-out forwards;
+        }
+        @keyframes explode {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(3); }
+        }
+        .messages-area {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #fff;
+            font-family: 'Georgia', serif;
+        }
+        .message {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .snowflake {
+            color: #fff;
+            font-size: 2em;
+            position: absolute;
+            top: -10%;
+            animation: fall 10s linear infinite;
+            user-select: none;
+        }
+        @keyframes fall {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(100px) translateY(100vh); }
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ddd;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .images-videos img,
+            .images-videos video {
+                max-width: 90%;
+            }
+            .messages-area {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .boxes {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+            .box {
+                font-size: 2em;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Merry Christmas and Happy New Year!</h1>
+
+    <!-- Snowflakes -->
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+
+    <h2>Mohpee wishing you:</h2>
+    <audio id="background-audio" src="WhatsApp Audio 2024-12-25 at 01.03.59.mpga" loop autoplay></audio>
+    <div class="images-section">
+        <div class="images-videos">
+            <img src="WhatsApp Image 2024-12-25 at 00.22.55(1).jpeg" alt="Merry Xmas" />
+            <img src="WhatsApp Image 2024-12-25 at 00.22.55.jpeg" alt="Happy Holidays" />
+        </div>
+    </div>
+
+    <h2>Memories...Tujibambe kiasi</h2>
+    <div class="videos-section">
+        <div class="images-videos">
+            <video src="WhatsApp Video 2024-12-25 at 00.22.53.mp4" controls onclick="togglePlay(this)"></video>
+            <video src="WhatsApp Video 2024-12-25 at 00.22.55.mp4" controls onclick="togglePlay(this)"></video>
+        </div>
+    </div>
+
+    <h2>Click on 3 Boxes to Reveal Your Surprises for the Year:</h2>
+    <div class="boxes">
+        <!-- 10 Boxes -->
+        <div class="box" onclick="openBox(1)">🎁</div>
+        <div class="box" onclick="openBox(2)">🎁</div>
+        <div class="box" onclick="openBox(3)">🎁</div>
+        <div class="box" onclick="openBox(4)">🎁</div>
+        <div class="box" onclick="openBox(5)">🎁</div>
+        <div class="box" onclick="openBox(6)">🎁</div>
+        <div class="box" onclick="openBox(7)">🎁</div>
+        <div class="box" onclick="openBox(8)">🎁</div>
+        <div class="box" onclick="openBox(9)">🎁</div>
+        <div class="box" onclick="openBox(10)">🎁</div>
+    </div>
+
+    <div id="messages-area" class="messages-area">
+        <h3>Revealed Messages:</h3>
+        <div id="messages-list"></div>
+    </div>
+
+    <footer>© 2024 Mohpee</footer>
+
+    <script>
+        const messages = [
+            "Kama hauna dem kam tucheze ball! 🎉",
+            "A surprise adventure awaits you! ✈️",
+            "We jua tu utagongewa!K is constant ❤️",
+            "Financial prosperity is in your future! 💰",
+            "Someone special will bring you joy! 🥰",
+            "Ni wewe next so ngojea kwa queque..! 🏆",
+            "Usijinyime ati unasave, unaeza enda kufungua safe udedi..! 🚪",
+            "A long-awaited dream will come true! 🌟",
+            "Mihadarati inakuwatch we tulia! 🔄",
+            "You will strengthen important relationships! 👩‍❤️‍👩"
+        ];
+
+        let openedBoxes = 0;
+        const maxBoxes = 3;
+        const audio = document.getElementById('background-audio');
+        const videos = document.querySelectorAll('video');
+
+        // Play background audio automatically
+        audio.play();
+
+        // Pause audio when a video is playing, resume when it ends
+        videos.forEach(video => {
+            video.addEventListener('play', () => {
+                audio.pause();
+            });
+            video.addEventListener('ended', () => {
+                audio.play();
+            });
+        });
+
+        function openBox(boxNumber) {
+            if (openedBoxes >= maxBoxes) {
+                alert("You've already opened 3 boxes!");
+                return;
+            }
+
+            const box = document.querySelector(`.boxes .box:nth-child(${boxNumber})`);
+            if (box.classList.contains("opened")) {
+                alert("This box is already opened!");
+                return;
+            }
+
+            box.classList.add("opened");
+
+            // Shuffle the messages array each time a box is opened to show a random message
+            const shuffledMessages = shuffleArray([...messages]);
+
+            // Get the next message from the shuffled list
+            const message = shuffledMessages[openedBoxes];
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+            messageElement.textContent = message;
+            document.getElementById("messages-list").appendChild(messageElement);
+            openedBoxes++;
+        }
+
+        // Function to shuffle an array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+            return array;
+        }
+
+        function togglePlay(video) {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+</body>
+</html>
